@@ -1,0 +1,48 @@
+.books-list{
+  padding-top: 2.5rem;
+  h1{
+    font-size: 1.4285714286rem;
+    margin-bottom: 1.1428571429rem;
+  }
+  .list{
+    display: flex;
+    flex-flow: column;
+    gap: 1.1428571429rem;
+    .book{
+      display: flex;
+      width: 100%;
+      box-shadow: 0 0 8px rgb(#121212, .12);
+      border-radius: 0.5714285714rem;
+      overflow: hidden;
+      .cover{
+        display: block;
+        width: 6rem;
+        height: 100%;
+      }
+      .content{
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        color: $main;
+        padding: 1rem 0.6428571429rem 0.9285714286rem 0.7142857143rem;
+        .type{
+          color: #292929;
+          font-size: 0.7142857143rem;
+          font-weight: 300;
+          line-height: 0.9728571429rem;
+        }
+        .title{
+          font-weight: 500;
+          line-height: 1.3621428571rem;
+          @media (max-width: 769px){
+            margin-bottom: 0.2857142857rem;
+          }
+        }
+        .autor{
+          font-size: 0.7142857143rem;
+          line-height: 0.9728571429rem;
+        }
+      }
+    }
+  }
+}

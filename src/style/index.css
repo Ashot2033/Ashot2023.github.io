@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 769px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 2.2857142857rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: block;
+  background: #121212;
+  text-align: center;
+  color: #f2f2f2;
+  font-weight: 500;
+  line-height: 1.4285714286rem;
+  border-radius: 0.2857142857rem;
+  padding: 0.7142857143rem;
+}
+.btn.pale {
+  background: rgba(18, 18, 18, 0.2);
+  color: #121212;
+}
+.btn.light {
+  background: #f2f2f2;
+  color: #121212;
+}
+
+:root {
+  --wrapper-padding: 20px;
+}
+
+.wrapper {
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+}
+
+header {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+}
+@media (min-width: 769px) {
+  header {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+header .container {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid transparent;
+  transition: 0.15s;
+  padding: 0.25rem 0;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: auto;
+}
+header input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+@media (max-width: 769px) {
+  header ul {
+    background: #121212;
+    border-radius: 0.32rem;
+    transition: 0.15s;
+    padding: 0.25rem 0.75rem;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: calc(48px + 0.5rem);
+    right: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  header ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  header ul li a {
+    width: 100%;
+    color: #fff;
+    padding: 0.85rem 2rem 0.85rem 0.5rem;
+  }
+}
+@media (min-width: 769px) {
+  header ul {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+}
+header ul li {
+  display: flex;
+  white-space: nowrap;
+}
+@media (min-width: 769px) {
+  header ul li {
+    border-bottom: none;
+  }
+}
+@media (min-width: 769px) {
+  header ul li a {
+    padding: 0.6rem 0.8rem;
+  }
+}
+header input[type=checkbox]:checked ~ ul {
+  visibility: visible;
+  opacity: 1;
+}
+header label {
+  cursor: pointer;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin-right: -12px;
+}
+@media (min-width: 769px) {
+  header label {
+    display: none;
+  }
+}
+header label::before, header label::after {
+  content: "";
+  width: 18px;
+  height: 2.4px;
+  background: #121212;
+  border-radius: 100vmax;
+  transition: 0.15s;
+}
+header label::before {
+  margin-bottom: 6px;
+}
+header input[type=checkbox]:checked ~ label::before {
+  margin-bottom: -2px;
+  transform: rotate(45deg);
+}
+header input[type=checkbox]:checked ~ label::after {
+  transform: rotate(-45deg);
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e6e6e6;
+  border-top-color: #121212;
+  border-radius: 50%;
+  -webkit-animation: 1s loader linear infinite;
+          animation: 1s loader linear infinite;
+}
+@-webkit-keyframes loader {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes loader {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.home {
+  padding-top: 1rem;
+}
+.home .pfp {
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 18rem;
+  border-radius: 50%;
+  background: url("/public/images/pfp.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 2rem;
+}
+.home h2 {
+  margin-bottom: 0.5714285714rem;
+}
+.home p {
+  margin-bottom: 0.8571428571rem;
+}
+
+.books-list {
+  padding-top: 2.5rem;
+}
+.books-list h1 {
+  font-size: 1.4285714286rem;
+  margin-bottom: 1.1428571429rem;
+}
+.books-list .list {
+  display: flex;
+  flex-flow: column;
+  gap: 1.1428571429rem;
+}
+.books-list .list .book {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(18, 18, 18, 0.12);
+  border-radius: 0.5714285714rem;
+  overflow: hidden;
+}
+.books-list .list .book .cover {
+  display: block;
+  width: 6rem;
+  height: 100%;
+}
+.books-list .list .book .content {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  color: #121212;
+  padding: 1rem 0.6428571429rem 0.9285714286rem 0.7142857143rem;
+}
+.books-list .list .book .content .type {
+  color: #292929;
+  font-size: 0.7142857143rem;
+  font-weight: 300;
+  line-height: 0.9728571429rem;
+}
+.books-list .list .book .content .title {
+  font-weight: 500;
+  line-height: 1.3621428571rem;
+}
+@media (max-width: 769px) {
+  .books-list .list .book .content .title {
+    margin-bottom: 0.2857142857rem;
+  }
+}
+.books-list .list .book .content .autor {
+  font-size: 0.7142857143rem;
+  line-height: 0.9728571429rem;
+}
+
+.details {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.details h4 {
+  margin-bottom: 0.5714285714rem;
+}
+.details .title {
+  font-size: 1.7142857143rem;
+  margin-bottom: 1.1428571429rem;
+}
+.details .cont {
+  display: flex;
+  gap: 1.5842857143rem;
+  margin-bottom: 1.2178571429rem;
+}
+.details .cont img {
+  display: block;
+  width: 100%;
+  max-width: 9.8rem;
+  border-radius: 0.5714285714rem;
+}
+.details .cont .about {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.details .cont .about ul li span {
+  font-weight: 500;
+}
+.details .cont .about .btn {
+  margin-top: 1.1428571429rem;
+}
+.details .description {
+  margin-bottom: 1.2178571429rem;
+}
+.details .contents {
+  border-radius: 0.5714285714rem;
+  box-shadow: 0 0 8px rgba(18, 18, 18, 0.12);
+  padding: 1rem;
+}
+.details .contents a {
+  display: block;
+  padding: 1rem 0;
+}
+
+.story {
+  padding-top: 3rem;
+  padding-bottom: var(--wrapper-padding);
+}
+.story h1 {
+  text-align: center;
+}
+.story .divider {
+  border-bottom: 1px solid #eee;
+  margin: 2rem 0;
+}
+.story p {
+  margin-bottom: 0.8571428571rem;
+}
+.story nav {
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,8 @@
+:root{
+  --wrapper-padding: 20px;
+}
+
+.wrapper{
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+}

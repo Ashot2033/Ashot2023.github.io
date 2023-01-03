@@ -1,0 +1,19 @@
+.home{
+  padding-top: 1rem;
+  .pfp{
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 18rem;
+    border-radius: 50%;
+    background: url("/public/images/pfp.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 2rem;
+  }
+  h2{
+    margin-bottom: 0.5714285714rem;
+  }
+  p{
+    margin-bottom: 0.8571428571rem;
+  }
+}

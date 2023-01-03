@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  @media (max-width: 769px){
+    font-size: 14px;
+  }
+}
+
+@import "./ui/variables";
+@import "./ui/typography";
+@import "./ui/btn";
+@import "./layout/wrapper";
+@import "./layout/list";
+@import "./layout/header";
+@import "./layout/loader";
+@import "./pages/home";
+@import "./pages/books-list";
+@import "./pages/details";
+@import "./pages/story";
