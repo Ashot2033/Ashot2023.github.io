@@ -20,7 +20,7 @@ const BooksList = () => {
       <h1>Мои книги</h1>
       <div className="list">{
         books && books.map(book => (
-          <a className="book" href={"/kbooks/books/" + book.id} key={book.title}>
+          <a className="book" href={"/books/" + book.id} key={book.title}>
             <img className="cover" src={"/images/covers/" + book.cover} />
             <div className="content">
               <div className="type">{ book.type }</div>
