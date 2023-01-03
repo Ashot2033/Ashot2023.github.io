@@ -1,6 +1,6 @@
 {
   "homepage": "http://ashot2003.github.io/kbooks",
-  "name": "books",
+  "name": "kbooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
