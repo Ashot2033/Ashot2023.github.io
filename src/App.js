@@ -36,11 +36,11 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/kbooks" element={<Home />}>
-            <Route path="/books">
+            <Route path="/kbooks/books">
               <Route index element={<BooksList />} />
               <Route path=":id" element={<Details />} />
             </Route>
-            <Route path="/story">
+            <Route path="/kbooks/story">
               <Route path=":id">
                 <Route path=":chapter" element={<Story />} />
               </Route>
