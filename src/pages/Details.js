@@ -28,7 +28,7 @@ const Details = () => {
             <li>Автор: <span>Князян А.З.</span></li>
             <li>Категории: <span>{ book && book.categories.join(', ') }</span></li>
           </ul>
-          <a href={"/story/" + params.id + "/1"} className="btn">Читать</a>
+          <a href={"/kbooks/story/" + params.id + "/1"} className="btn">Читать</a>
         </div>
       </div>
 
