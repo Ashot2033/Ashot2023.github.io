@@ -1,12 +1,5 @@
 header{
-  position: relative;
-  width: 100%;
-  z-index: 999;
   background: #fff;
-  @media (min-width: 769px){
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
   .container{
     display: flex;
