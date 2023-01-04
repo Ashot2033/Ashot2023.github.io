@@ -7,7 +7,7 @@ const BooksList = () => {
   const [books, setBooks] = useState()
 
   // get books
-  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/main/public/api/books.json')
+  useFetch('https://ashot2003.github.io/kbooks/api/books.json')
     .then(data => {
       let arr = []
       data.forEach(obj => arr.push(obj.about))
@@ -22,7 +22,7 @@ const BooksList = () => {
       <div className="list">{
         books && books.map(book => (
           <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
-            <img className="cover" src={"https://raw.githubusercontent.com/ashot2003/kbooks/main/public/images/covers/" + book.cover} />
+            <img className="cover" src={"https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
             <div className="content">
               <div className="type">{ book.type }</div>
               <div className="title">{ book.title }</div>

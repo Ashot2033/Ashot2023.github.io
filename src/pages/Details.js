@@ -12,7 +12,7 @@ const Details = () => {
   const params = useParams()
 
   // get books
-  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/main/public/api/books.json')
+  useFetch('https://ashot2003.github.io/kbooks/api/books.json')
     .then(data => setBook(data[params.id].about))
     .catch(err => {})
 
@@ -22,7 +22,7 @@ const Details = () => {
       <h1 className="title">{ book && book.title }</h1>
 
       <div className="cont">
-        <img src={book && "https://raw.githubusercontent.com/ashot2003/kbooks/main/public/images/covers/" + book.cover} />
+        <img src={book && "https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
         <div className="about">
           <ul>
             <li>Автор: <span>Князян А.З.</span></li>
