@@ -10,7 +10,7 @@ const BooksList = () => {
       .then(res => { return res.json() })
       .then(data => {
         data.forEach(book => {
-          setBooks([...books, book.about])
+          setBooks(current => [{ "id": book.id, ...book.about }, ...current])
         })
       })
   }, [])
@@ -20,8 +20,8 @@ const BooksList = () => {
       <h1>Мои книги</h1>
       { !books && <p>Загрузка...</p> }
       <div className="list">{
-        books && books.map((book, i) => (
-          <a className="book" href={"/kbooks/#/books/" + i} key={book.title}>
+        books && books.map(book => (
+          <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
             <img className="cover" src={"https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
             <div className="content">
               <div className="type">{ book.type }</div>
