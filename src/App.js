@@ -29,6 +29,10 @@ const App = () => {
     }, 200)
   }
 
+  ////
+  console.log(1)
+  ////
+
   return (
     <>
       <div className="loader"/>
