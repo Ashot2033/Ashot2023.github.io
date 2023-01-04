@@ -14,7 +14,7 @@ const Story = () => {
   const params = useParams()
 
   // get book
-  useFetch('/api/books.json')
+  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/1632e0ba0ce3b7db8daaf8a85bc8c557feafb2ce/public/api/books.json')
     .then(data => {
       setChaptersLength(data[params.id].about.contents.length)
       setTitle(data[params.id].about.contents[params.chapter-1])
@@ -34,11 +34,11 @@ const Story = () => {
       <nav>
         {
           params.chapter < chaptersLength &&
-            <a className="btn" href={"/story/" + params.id + "/" + (parseInt(params.chapter)+1) }>Следующая глава</a>
+            <a className="btn" href={"/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1) }>Следующая глава</a>
         }
         {
           params.chapter > 1 &&
-            <a className="btn pale" href={"/story/" + params.id + "/" + (parseInt(params.chapter)-1) }>Предыдущая глава</a>
+            <a className="btn pale" href={"/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1) }>Предыдущая глава</a>
         }
       </nav>
     </main>

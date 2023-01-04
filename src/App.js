@@ -29,27 +29,26 @@ const App = () => {
     }, 200)
   }
 
-  ////
-  console.log(1)
-  ////
-
   return (
     <>
       <div className="loader"/>
       <Header/>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="/books">
-              <Route index element={<BooksList />} />
-              <Route path=":id" element={<Details />} />
-            </Route>
-            <Route path="/story">
-              <Route path=":id">
-                <Route path=":chapter" element={<Story />} />
-              </Route>
+
+          <Route path="/" element={<Home />} />
+
+          <Route path="/books">
+            <Route index element={<BooksList />} />
+            <Route path=":id" element={<Details />} />
+          </Route>
+
+          <Route path="/story">
+            <Route path=":id">
+              <Route path=":chapter" element={<Story />} />
             </Route>
           </Route>
+
         </Routes>
       </HashRouter>
     </>
