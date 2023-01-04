@@ -18,24 +18,22 @@ const Details = () => {
 
   return (
     <main className="details wrapper">
-      <h1 className="title">{ book && book.title }</h1>
       <div className="cont">
         <img src={book && "https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
         <div className="about">
           <ul>
+            <h1 className="title">{ book && book.title }</h1>
             <li>Автор: <span>Князян А.З.</span></li>
             { book && "categories" in book && <li>Категории: <span>{ book && book.categories.join(', ') }</span></li> }
           </ul>
           <a href={"/kbooks/#/story/" + params.id + "/1"} className="btn">Читать</a>
         </div>
       </div>
-      {
-        book && "description" in book &&
-        <div className="description">
-          <h4>Описание:</h4>
-          <p>{ book && book.description }</p>
-        </div>
-      }
+      <div className="description">
+        <h4>Описание:</h4>
+        <p>{ book && "description" in book && book.description }</p>
+        { book && !("description" in book) && <p>Отсутствует</p> }
+      </div>
       <div className="contents">
         <h4>Содержание</h4>
         {

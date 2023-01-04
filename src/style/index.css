@@ -72,7 +72,7 @@ header .container {
   align-items: center;
   border-bottom: 0.0625rem solid transparent;
   transition: 0.15s;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
 }
 header .logo {
   font-size: 1.5rem;
@@ -119,6 +119,9 @@ header ul li {
 @media (min-width: 769px) {
   header ul li {
     border-bottom: none;
+  }
+  header ul li:last-child a {
+    margin-right: -0.8rem;
   }
 }
 @media (min-width: 769px) {
@@ -283,10 +286,6 @@ header input[type=checkbox]:checked ~ label::after {
 .details h4 {
   margin-bottom: 0.5714285714rem;
 }
-.details .title {
-  font-size: 1.7142857143rem;
-  margin-bottom: 1.1428571429rem;
-}
 .details .cont {
   display: flex;
   gap: 1.5842857143rem;
@@ -302,6 +301,17 @@ header input[type=checkbox]:checked ~ label::after {
   display: flex;
   flex-flow: column;
   justify-content: center;
+}
+.details .cont .about ul {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5714285714rem;
+}
+.details .cont .about ul .title {
+  font-size: 1.7142857143rem;
+}
+.details .cont .about ul li {
+  line-height: 1.6rem;
 }
 .details .cont .about ul li span {
   font-weight: 500;
@@ -328,10 +338,11 @@ header input[type=checkbox]:checked ~ label::after {
 }
 .story h1 {
   text-align: center;
+  line-height: 4rem;
 }
 .story .divider {
   border-bottom: 1px solid #eee;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 .story p {
   margin-bottom: 0.8571428571rem;

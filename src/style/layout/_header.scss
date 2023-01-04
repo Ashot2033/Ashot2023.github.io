@@ -6,7 +6,7 @@ header{
     align-items: center;
     border-bottom: .0625rem solid transparent;
     transition: $transition;
-    padding: .25rem 0;
+    padding: .3rem 0;
   }
 
   .logo{
@@ -40,6 +40,7 @@ header{
       white-space: nowrap;
       @media (min-width: 769px){
         border-bottom: none;
+        &:last-child a{ margin-right: -0.8rem; }
       }
       a{
         @media (min-width: 769px){

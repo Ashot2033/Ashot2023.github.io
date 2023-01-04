@@ -4,10 +4,6 @@
   h4{
     margin-bottom: 0.5714285714rem;
   }
-  .title{
-    font-size: 1.7142857143rem;
-    margin-bottom: 1.1428571429rem;
-  }
   .cont{
     display: flex;
     gap: 1.5842857143rem;
@@ -23,7 +19,14 @@
       flex-flow: column;
       justify-content: center;
       ul{
+        display: flex;
+        flex-flow: column;
+        gap: 0.5714285714rem;
+        .title{
+          font-size: 1.7142857143rem;
+        }
         li{
+          line-height: 1.6rem;
           span{
             font-weight: 500;
           }
