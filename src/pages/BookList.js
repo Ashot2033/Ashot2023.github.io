@@ -4,11 +4,13 @@ import { useState } from "react"
 import useFetch from "../hooks/useFetch"
 
 const BooksList = () => {
+  const [id, setId] = useState()
   const [books, setBooks] = useState()
 
   // get books
   useFetch('https://ashot2003.github.io/kbooks/api/books.json')
     .then(data => {
+      setId(data.id)
       let arr = []
       data.forEach(obj => arr.push(obj.about))
       setBooks(arr)
@@ -21,7 +23,7 @@ const BooksList = () => {
       { !books && <p>Загрузка...</p> }
       <div className="list">{
         books && books.map(book => (
-          <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
+          <a className="book" href={"/kbooks/#/books/" + id} key={book.title}>
             <img className="cover" src={"https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
             <div className="content">
               <div className="type">{ book.type }</div>
