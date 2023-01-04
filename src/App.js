@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 // router
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 // layout components
 import Header from "./layout/Header"
 // components
@@ -33,20 +33,20 @@ const App = () => {
     <>
       <div className="loader"/>
       <Header/>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/kbooks/" element={<Home />} />
-          <Route path="/kbooks/books">
-              <Route index element={<BooksList />} />
-              <Route path=":id" element={<Details />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/books">
+            <Route index element={<BooksList />} />
+            <Route path=":id" element={<Details />} />
+          </Route>
+          <Route path="/story">
+            <Route path=":id">
+              <Route path=":chapter" element={<Story />} />
             </Route>
-            <Route path="/kbooks/story">
-              <Route path=":id">
-                <Route path=":chapter" element={<Story />} />
-              </Route>
-            </Route>
+          </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
