@@ -15,9 +15,11 @@
       border-radius: 0.5714285714rem;
       overflow: hidden;
       .cover{
-        display: block;
+        aspect-ratio: 512/800;
         width: 6rem;
-        height: 100%;
+        background-color: #ddd;
+        background-size: cover;
+        background-position: center;
       }
       .content{
         flex: 1;

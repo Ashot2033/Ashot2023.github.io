@@ -22,7 +22,7 @@ const BooksList = () => {
       <div className="list">{
         books && books.map(book => (
           <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
-            <img className="cover" src={"https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
+            <div className="cover" style={{ backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} />
             <div className="content">
               <div className="type">{ book.type }</div>
               <div className="title">{ book.title }</div>

@@ -248,9 +248,11 @@ header input[type=checkbox]:checked ~ label::after {
   overflow: hidden;
 }
 .books-list .list .book .cover {
-  display: block;
+  aspect-ratio: 512/800;
   width: 6rem;
-  height: 100%;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
 }
 .books-list .list .book .content {
   flex: 1;
