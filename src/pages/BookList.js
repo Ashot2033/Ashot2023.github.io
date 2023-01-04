@@ -18,6 +18,7 @@ const BooksList = () => {
   return (
     <main className="books-list wrapper">
       <h1>Мои книги</h1>
+      { !books && <p>Загрузка...</p> }
       <div className="list">{
         books && books.map(book => (
           <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
