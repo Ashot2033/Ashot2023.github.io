@@ -1,9 +1,7 @@
 // react
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // router
 import { useParams } from "react-router-dom"
-// hooks
-import useFetch from "../hooks/useFetch"
 
 const Story = () => {
   const [chapter, setChapter] = useState()
@@ -13,15 +11,16 @@ const Story = () => {
   // get url params
   const params = useParams()
 
-  // get book
-  useFetch('https://ashot2003.github.io/kbooks/api/books.json')
-    .then(data => {
-      setChaptersLength(data[params.id].about.contents.length)
-      setTitle(data[params.id].about.contents[params.chapter-1])
-      setChapter(data[params.id].parts[params.chapter-1])
-    })
-    .then(console.log(chapter))
-    .catch(err => {})
+  // get chapter
+  useEffect(()=>{
+    fetch('https://ashot2003.github.io/kbooks/api/books.json')
+      .then(res => { return res.json() })
+      .then(data => {
+        setChaptersLength(data[params.id].about.contents.length)
+        setTitle(data[params.id].about.contents[params.chapter-1])
+        setChapter(data[params.id].parts[params.chapter-1])
+      })
+  }, [])
 
   return (
     <main className="story wrapper">

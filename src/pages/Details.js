@@ -1,9 +1,7 @@
 // react
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // router
 import { useParams } from "react-router-dom"
-// hooks
-import useFetch from "../hooks/useFetch"
 
 const Details = () => {
   const [book, setBook] = useState()
@@ -11,16 +9,16 @@ const Details = () => {
   // get url params
   const params = useParams()
 
-  // get books
-  useFetch('https://ashot2003.github.io/kbooks/api/books.json')
-    .then(data => setBook(data[params.id].about))
-    .catch(err => {})
+  // get book
+  useEffect(()=>{
+    fetch('https://ashot2003.github.io/kbooks/api/books.json')
+      .then(res => { return res.json() })
+      .then(data => setBook(data[params.id].about))
+  }, [])
 
   return (
     <main className="details wrapper">
-
       <h1 className="title">{ book && book.title }</h1>
-
       <div className="cont">
         <img src={book && "https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
         <div className="about">
@@ -31,12 +29,10 @@ const Details = () => {
           <a href={"/kbooks/#/story/" + params.id + "/1"} className="btn">Читать</a>
         </div>
       </div>
-
       <div className="description">
         <h4>Описание:</h4>
         <p>{ book && book.description }</p>
       </div>
-
       <div className="contents">
         <h4>Содержание</h4>
         {
@@ -45,7 +41,6 @@ const Details = () => {
           ))
         }
       </div>
-
     </main>
   )
 }
