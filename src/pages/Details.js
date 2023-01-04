@@ -37,9 +37,13 @@ const Details = () => {
       <div className="contents">
         <h4>Содержание</h4>
         {
-          book && book.contents.map((chapter, i) => (
+          book && "contents" in book && book.contents.map((chapter, i) => (
             <a href={"/kbooks/#/story/" + params.id + "/" + (i+1)} key={i}>{ chapter }</a>
           ))
+        }
+        {
+          book && !("contents" in book) &&
+          <a href={"/kbooks/#/story/" + params.id + "/1"} key={1}>{ book.title }</a>
         }
       </div>
     </main>

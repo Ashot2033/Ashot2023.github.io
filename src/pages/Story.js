@@ -16,9 +16,12 @@ const Story = () => {
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
       .then(res => { return res.json() })
       .then(data => {
-        setChaptersLength(data[params.id].about.contents.length)
-        setTitle(data[params.id].about.contents[params.chapter-1])
-        setChapter(data[params.id].text[params.chapter-1])
+        const chapters = data[params.id].text.length
+        const name = chapters > 1 ? data[params.id].about.contents[params.chapter-1] : data[params.id].about.title
+        const text = data[params.id].text[params.chapter-1]
+        setChaptersLength(chapters)
+        setTitle(name)
+        setChapter(text)
       })
   }, [])
 
