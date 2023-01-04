@@ -18,7 +18,7 @@ const Story = () => {
       .then(data => {
         setChaptersLength(data[params.id].about.contents.length)
         setTitle(data[params.id].about.contents[params.chapter-1])
-        setChapter(data[params.id].parts[params.chapter-1])
+        setChapter(data[params.id].text[params.chapter-1])
       })
   }, [])
 
