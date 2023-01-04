@@ -26,7 +26,7 @@ const App = () => {
       loader.style.transition = ".3s"
       loader.style.opacity = 0
       loader.style.pointerEvents = "none"
-    }, 200)
+    }, 400)
   }
 
   return (
