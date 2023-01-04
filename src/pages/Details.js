@@ -29,10 +29,13 @@ const Details = () => {
           <a href={"/kbooks/#/story/" + params.id + "/1"} className="btn">Читать</a>
         </div>
       </div>
-      <div className="description">
-        <h4>Описание:</h4>
-        <p>{ book && book.description }</p>
-      </div>
+      {
+        book && "description" in book &&
+        <div className="description">
+          <h4>Описание:</h4>
+          <p>{ book && book.description }</p>
+        </div>
+      }
       <div className="contents">
         <h4>Содержание</h4>
         {
