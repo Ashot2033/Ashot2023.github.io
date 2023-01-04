@@ -14,7 +14,7 @@ const Story = () => {
   const params = useParams()
 
   // get book
-  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/1632e0ba0ce3b7db8daaf8a85bc8c557feafb2ce/public/api/books.json')
+  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/main/public/api/books.json')
     .then(data => {
       setChaptersLength(data[params.id].about.contents.length)
       setTitle(data[params.id].about.contents[params.chapter-1])

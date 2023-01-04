@@ -12,7 +12,7 @@ const Details = () => {
   const params = useParams()
 
   // get books
-  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/1632e0ba0ce3b7db8daaf8a85bc8c557feafb2ce/public/api/books.json')
+  useFetch('https://raw.githubusercontent.com/ashot2003/kbooks/main/public/api/books.json')
     .then(data => setBook(data[params.id].about))
     .catch(err => {})
 
