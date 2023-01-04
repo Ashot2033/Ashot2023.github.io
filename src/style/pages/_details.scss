@@ -4,17 +4,20 @@
   h4{
     margin-bottom: 0.5714285714rem;
   }
-  .cont{
+  .about{
     display: flex;
     gap: 1.5842857143rem;
     margin-bottom: 1.2178571429rem;
-    img{
-      display: block;
+    .cover{
+      aspect-ratio: 512/800;
       width: 100%;
       max-width: 9.8rem;
       border-radius: 0.5714285714rem;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
     }
-    .about{
+    .cont{
       display: flex;
       flex-flow: column;
       justify-content: center;

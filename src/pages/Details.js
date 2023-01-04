@@ -18,9 +18,9 @@ const Details = () => {
 
   return (
     <main className="details wrapper">
-      <div className="cont">
-        <img src={book && "https://ashot2003.github.io/kbooks/images/covers/" + book.cover} />
-        <div className="about">
+      <div className="about">
+        <div className="cover" style={ book && { backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} />
+        <div className="cont">
           <ul>
             <h1 className="title">{ book && book.title }</h1>
             <li>Автор: <span>Князян А.З.</span></li>

@@ -288,37 +288,40 @@ header input[type=checkbox]:checked ~ label::after {
 .details h4 {
   margin-bottom: 0.5714285714rem;
 }
-.details .cont {
+.details .about {
   display: flex;
   gap: 1.5842857143rem;
   margin-bottom: 1.2178571429rem;
 }
-.details .cont img {
-  display: block;
+.details .about .cover {
+  aspect-ratio: 512/800;
   width: 100%;
   max-width: 9.8rem;
   border-radius: 0.5714285714rem;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
 }
-.details .cont .about {
+.details .about .cont {
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
-.details .cont .about ul {
+.details .about .cont ul {
   display: flex;
   flex-flow: column;
   gap: 0.5714285714rem;
 }
-.details .cont .about ul .title {
+.details .about .cont ul .title {
   font-size: 1.7142857143rem;
 }
-.details .cont .about ul li {
+.details .about .cont ul li {
   line-height: 1.6rem;
 }
-.details .cont .about ul li span {
+.details .about .cont ul li span {
   font-weight: 500;
 }
-.details .cont .about .btn {
+.details .about .cont .btn {
   margin-top: 1.1428571429rem;
 }
 .details .description {
