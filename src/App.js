@@ -35,14 +35,15 @@ const App = () => {
       <Header/>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books">
-            <Route index element={<BooksList />} />
-            <Route path=":id" element={<Details />} />
-          </Route>
-          <Route path="/story">
-            <Route path=":id">
-              <Route path=":chapter" element={<Story />} />
+          <Route path="/" element={<Home />}>
+            <Route path="/books">
+              <Route index element={<BooksList />} />
+              <Route path=":id" element={<Details />} />
+            </Route>
+            <Route path="/story">
+              <Route path=":id">
+                <Route path=":chapter" element={<Story />} />
+              </Route>
             </Route>
           </Route>
         </Routes>
