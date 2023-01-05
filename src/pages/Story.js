@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react"
 // router
 import { useParams } from "react-router-dom"
+// handlers
+import { redirect } from "../handlers/redirect"
 
 const Story = () => {
   const [chapter, setChapter] = useState()
@@ -37,17 +39,11 @@ const Story = () => {
       <nav>
         {
           params.chapter < chaptersLength &&
-            <button className="btn" onClick={()=>{
-              window.location.replace("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1))
-              window.location.reload()
-            }}>Следующая глава</button>
+            <button className="btn" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1)) }>Следующая глава</button>
         }
         {
           params.chapter > 1 &&
-            <button className="btn pale" onClick={()=>{
-              window.location.replace("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1))
-              window.location.reload()
-            }}>Предыдущая глава</button>
+            <button className="btn pale" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
         }
       </nav>
     </main>

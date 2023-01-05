@@ -5,6 +5,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from "./layout/Header"
 // components
 import Home from "./pages/Home"
+import Suggest from "./pages/Suggest"
 import BooksList from "./pages/BookList"
 import Details from "./pages/Details"
 import Story from "./pages/Story"
@@ -37,6 +38,8 @@ const App = () => {
         <Routes>
 
           <Route path="/" element={<Home />} />
+
+          <Route path="/suggest" element={<Suggest />} />
 
           <Route path="/books">
             <Route index element={<BooksList />} />

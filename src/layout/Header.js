@@ -18,15 +18,13 @@ const Header = () => {
 
   return (
     <header className="wrapper">
-      <div className="container wrapper">
-        <a href="/kbooks" className="logo">KBooks</a>
-        <input type="checkbox" id="menuBtn" />
-        <ul>
-          <li><a href="/kbooks">Главная</a></li>
-          <li><a href="/kbooks/#/books">Книги</a></li>
-        </ul>
-        <label htmlFor="menuBtn"/>
-      </div>
+      <a href="/kbooks" className="logo">KBooks</a>
+      <input type="checkbox" id="menuBtn" />
+      <ul>
+        <li><a href="/kbooks">Главная</a></li>
+        <li><a href="/kbooks/#/books">Книги</a></li>
+      </ul>
+      <label htmlFor="menuBtn"/>
     </header>
   )
 }

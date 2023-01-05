@@ -1,13 +1,11 @@
 header{
+  display: flex;
+  align-items: center;
   background: #fff;
-
-  .container{
-    display: flex;
-    align-items: center;
-    border-bottom: .0625rem solid transparent;
-    transition: $transition;
-    padding: .3rem 0;
-  }
+  border-bottom: .0625rem solid transparent;
+  transition: $transition;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
 
   .logo{
     font-size: 1.5rem;
