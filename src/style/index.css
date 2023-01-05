@@ -67,6 +67,8 @@ ul {
 }
 
 header {
+  position: relative;
+  z-index: 999;
   display: flex;
   align-items: center;
   background: #fff;
@@ -235,7 +237,6 @@ header input[type=checkbox]:checked ~ label::after {
 
 .suggest {
   position: relative;
-  z-index: -1;
   padding-top: 1rem;
 }
 .suggest .not-working {
