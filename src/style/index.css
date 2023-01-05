@@ -256,9 +256,6 @@ header input[type=checkbox]:checked ~ label::after {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.suggest form {
-  filter: blur(10px);
-}
 .suggest p {
   padding: 0 0.75rem;
 }

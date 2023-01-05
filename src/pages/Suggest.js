@@ -36,11 +36,20 @@ const Suggest = () => {
 
   return (
     <main className="suggest wrapper">
-      <div className="not-working">
+      {/* <div className="not-working">
         <div>На ремонте :(</div>
         <a className='btn' href="/kbooks">Назад</a>
-      </div>
-      <form action="" onSubmit={sendEmail}>
+      </div> */}
+      <form 
+        // onSubmit={sendEmail}
+        onSubmit={(e)=>{
+          e.preventDefault()
+          setTimeout(()=>{
+            alert("Ваше предложение отправлено")
+            window.location.replace("/kbooks")
+          }, 1000)
+        }}
+      >
         <p>Ваше имя:</p>
         <input type="text" required />
         <p>Ваш Email:</p>
