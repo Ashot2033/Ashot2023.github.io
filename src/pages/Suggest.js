@@ -14,7 +14,7 @@ const Suggest = () => {
       gapi.client.load('gmail', 'v1', () => {
         console.log('Loaded Gmail')
         gapi.client.init({
-          apiKey: "AIzaSyBL7hJeFkip_HHHWiDv_xFnKCnJuy8Pp9w",
+          apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXX",
           discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest'],
           client_id: "497136684444-fc958bdafr0i2v4tpt1v2r7on0sb59kh.apps.googleusercontent.com",
           immediate: true,
