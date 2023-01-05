@@ -235,6 +235,7 @@ header input[type=checkbox]:checked ~ label::after {
 
 .suggest {
   position: relative;
+  z-index: -1;
   padding-top: 1rem;
 }
 .suggest .not-working {
