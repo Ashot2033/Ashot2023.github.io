@@ -37,11 +37,17 @@ const Story = () => {
       <nav>
         {
           params.chapter < chaptersLength &&
-            <a className="btn" href={"/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1) }>Следующая глава</a>
+            <button className="btn" onClick={()=>{
+              window.location.replace("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1))
+              window.location.reload()
+            }}>Следующая глава</button>
         }
         {
           params.chapter > 1 &&
-            <a className="btn pale" href={"/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1) }>Предыдущая глава</a>
+            <button className="btn pale" onClick={()=>{
+              window.location.replace("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1))
+              window.location.reload()
+            }}>Предыдущая глава</button>
         }
       </nav>
     </main>
