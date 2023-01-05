@@ -49,12 +49,8 @@ ul {
   border-radius: 0.2857142857rem;
   padding: 0.7142857143rem 1.4285714286rem;
 }
-.btn.pale {
-  background: rgba(18, 18, 18, 0.1);
-  color: #121212;
-}
 .btn.light {
-  background: #f2f2f2;
+  background: rgba(18, 18, 18, 0.1);
   color: #121212;
 }
 

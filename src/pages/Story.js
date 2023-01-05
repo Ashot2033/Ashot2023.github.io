@@ -43,7 +43,7 @@ const Story = () => {
         }
         {
           params.chapter > 1 &&
-            <button className="btn pale" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
+            <button className="btn light" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
         }
       </nav>
     </main>
