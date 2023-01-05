@@ -23,6 +23,7 @@ const Header = () => {
       <ul>
         <li><a href="/kbooks">Главная</a></li>
         <li><a href="/kbooks/#/books">Книги</a></li>
+        <li><a href="/kbooks/#/suggest">Предложить</a></li>
       </ul>
       <label htmlFor="menuBtn"/>
     </header>
