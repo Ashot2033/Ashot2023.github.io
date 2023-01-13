@@ -15,6 +15,9 @@ const Story = () => {
 
   // get chapter
   useEffect(()=>{
+    window.addEventListener("scroll", ()=>{
+      document.querySelector('main.story .progress').style.width = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100 + "%"
+    })
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
       .then(res => { return res.json() })
       .then(data => {
@@ -29,6 +32,7 @@ const Story = () => {
 
   return (
     <main className="story wrapper">
+      <div className="progress"/>
       <h1>{ title }</h1>
       <div className="divider" />
       <div className="text">{

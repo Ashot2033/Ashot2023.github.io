@@ -10,6 +10,7 @@ header{
   padding-bottom: .3rem;
 
   .logo{
+    color: $main;
     font-size: 1.5rem;
     font-weight: 700;
     margin-right: auto;
@@ -33,7 +34,6 @@ header{
     @media (min-width: 769px){
       display: flex;
       align-items: center;
-      gap: .2rem;
     }
     li{
       display: flex;
@@ -44,7 +44,11 @@ header{
       }
       a{
         @media (min-width: 769px){
-          padding: .6rem .8rem;
+          padding: .6rem .9rem;
+          &:hover{
+            text-decoration: underline;
+            color: $main;
+          }
         }
       }
     }

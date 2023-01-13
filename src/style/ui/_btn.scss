@@ -9,8 +9,15 @@
   border: none;
   border-radius: 0.2857142857rem;
   padding: 0.7142857143rem 1.4285714286rem;
+  &:hover{
+    background: darken($main, 1);
+  }
   &.light{
     background: rgb($main, .1);
     color: $main;
+    &:hover{
+      background: rgb($main, .12);
+      text-decoration: underline;
+    }
   }
 }

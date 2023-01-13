@@ -1,5 +1,10 @@
 .books-list{
   padding-top: 2.5rem;
+  p{
+    position: absolute;
+    z-index: -1;
+    padding: .2rem 0;
+  }
   h1{
     font-size: 1.4285714286rem;
     margin-bottom: 1.1428571429rem;
@@ -11,7 +16,7 @@
     .book{
       display: flex;
       width: 100%;
-      box-shadow: 0 0 8px rgb(#121212, .12);
+      box-shadow: 0 0 50px rgb(#535353, .08);
       border-radius: 0.5714285714rem;
       overflow: hidden;
       .cover{
@@ -25,7 +30,6 @@
         flex: 1;
         display: flex;
         flex-flow: column;
-        color: $main;
         padding: 1rem 0.6428571429rem 0.9285714286rem 0.7142857143rem;
         .type{
           color: #292929;

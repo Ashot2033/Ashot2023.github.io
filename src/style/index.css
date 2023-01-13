@@ -12,12 +12,12 @@
 
 body, button, textarea {
   font-family: "Roboto", sans-serif;
-  color: #121212;
+  color: #000;
 }
 
 a {
   text-decoration: none;
-  color: #121212;
+  color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +40,7 @@ ul {
 .btn {
   cursor: pointer;
   display: block;
-  background: #121212;
+  background: #1B755E;
   text-align: center;
   color: #f2f2f2;
   font-weight: 500;
@@ -49,9 +49,16 @@ ul {
   border-radius: 0.2857142857rem;
   padding: 0.7142857143rem 1.4285714286rem;
 }
+.btn:hover {
+  background: #1a715b;
+}
 .btn.light {
-  background: rgba(18, 18, 18, 0.1);
-  color: #121212;
+  background: rgba(27, 117, 94, 0.1);
+  color: #1B755E;
+}
+.btn.light:hover {
+  background: rgba(27, 117, 94, 0.12);
+  text-decoration: underline;
 }
 
 :root {
@@ -78,6 +85,7 @@ header {
   padding-bottom: 0.3rem;
 }
 header .logo {
+  color: #1B755E;
   font-size: 1.5rem;
   font-weight: 700;
   margin-right: auto;
@@ -88,7 +96,7 @@ header input[type=checkbox] {
 }
 @media (max-width: 769px) {
   header ul {
-    background: #121212;
+    background: #1B755E;
     border-radius: 0.32rem;
     transition: 0.15s;
     padding: 0.25rem 0.75rem;
@@ -112,7 +120,6 @@ header input[type=checkbox] {
   header ul {
     display: flex;
     align-items: center;
-    gap: 0.2rem;
   }
 }
 header ul li {
@@ -129,7 +136,11 @@ header ul li {
 }
 @media (min-width: 769px) {
   header ul li a {
-    padding: 0.6rem 0.8rem;
+    padding: 0.6rem 0.9rem;
+  }
+  header ul li a:hover {
+    text-decoration: underline;
+    color: #1B755E;
   }
 }
 header input[type=checkbox]:checked ~ ul {
@@ -157,7 +168,7 @@ header label::before, header label::after {
   content: "";
   width: 18px;
   height: 2.4px;
-  background: #121212;
+  background: #1B755E;
   border-radius: 100vmax;
   transition: 0.15s;
 }
@@ -188,7 +199,7 @@ header input[type=checkbox]:checked ~ label::after {
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 3px solid #121212;
+  border: 3px solid #1B755E;
   border-top-color: transparent;
   border-radius: 50%;
   -webkit-animation: 1s loader linear infinite;
@@ -280,6 +291,11 @@ header input[type=checkbox]:checked ~ label::after {
 .books-list {
   padding-top: 2.5rem;
 }
+.books-list p {
+  position: absolute;
+  z-index: -1;
+  padding: 0.2rem 0;
+}
 .books-list h1 {
   font-size: 1.4285714286rem;
   margin-bottom: 1.1428571429rem;
@@ -292,7 +308,7 @@ header input[type=checkbox]:checked ~ label::after {
 .books-list .list .book {
   display: flex;
   width: 100%;
-  box-shadow: 0 0 8px rgba(18, 18, 18, 0.12);
+  box-shadow: 0 0 50px rgba(83, 83, 83, 0.08);
   border-radius: 0.5714285714rem;
   overflow: hidden;
 }
@@ -307,7 +323,6 @@ header input[type=checkbox]:checked ~ label::after {
   flex: 1;
   display: flex;
   flex-flow: column;
-  color: #121212;
   padding: 1rem 0.6428571429rem 0.9285714286rem 0.7142857143rem;
 }
 .books-list .list .book .content .type {
@@ -385,10 +400,21 @@ header input[type=checkbox]:checked ~ label::after {
   display: block;
   padding: 1rem 0;
 }
+.details .contents a:hover {
+  color: #1B755E;
+}
 
 .story {
   padding-top: 3rem;
   padding-bottom: var(--wrapper-padding);
+}
+.story .progress {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #1B755E;
 }
 .story h1 {
   text-align: center;

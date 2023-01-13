@@ -1,6 +1,14 @@
 .story{
   padding-top: 3rem;
   padding-bottom: var(--wrapper-padding);
+  .progress{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: $main;
+  }
   h1{
     text-align: center;
     line-height: 4rem;
