@@ -96,7 +96,7 @@ header input[type=checkbox] {
 }
 @media (max-width: 769px) {
   header ul {
-    background: #1B755E;
+    background: #1b1b1b;
     border-radius: 0.32rem;
     transition: 0.15s;
     padding: 0.25rem 0.75rem;
@@ -168,7 +168,7 @@ header label::before, header label::after {
   content: "";
   width: 18px;
   height: 2.4px;
-  background: #1B755E;
+  background: #000;
   border-radius: 100vmax;
   transition: 0.15s;
 }
