@@ -85,7 +85,7 @@ header {
   padding-bottom: 0.3rem;
 }
 header .logo {
-  color: #1B755E;
+  font-family: "Playfair Display", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   margin-right: auto;
@@ -232,8 +232,8 @@ header input[type=checkbox]:checked ~ label::after {
   border-radius: 50%;
   background-color: #ddd;
   background-image: url("/public/images/pfp.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 170%;
+  background-position: 60% 0;
   margin: 0 auto 2rem;
 }
 .home h2 {
@@ -424,7 +424,10 @@ header input[type=checkbox]:checked ~ label::after {
   border-bottom: 1px solid #eee;
   margin: 3rem 0;
 }
-.story p {
+.story .text {
+  font-family: "Roboto", sans-serif;
+}
+.story .text p {
   margin-bottom: 0.8571428571rem;
 }
 .story nav {

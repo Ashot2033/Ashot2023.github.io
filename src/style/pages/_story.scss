@@ -17,8 +17,11 @@
     border-bottom: 1px solid #eee;
     margin: 3rem 0;
   }
-  p{
-    margin-bottom: 0.8571428571rem;
+  .text{
+    font-family: 'Roboto', sans-serif;
+    p{
+      margin-bottom: 0.8571428571rem;
+    }
   }
   nav{
     display: flex;
