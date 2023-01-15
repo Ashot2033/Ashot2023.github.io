@@ -28,7 +28,7 @@ const Story = () => {
         setTitle(name)
         setChapter(text)
       })
-  }, [])
+  })
 
   return (
     <main className="story wrapper">

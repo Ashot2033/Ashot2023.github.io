@@ -14,7 +14,7 @@ const Details = () => {
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
       .then(res => { return res.json() })
       .then(data => setBook(data[params.id].about))
-  }, [])
+  })
 
   return (
     <main className="details wrapper">
