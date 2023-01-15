@@ -1,5 +1,8 @@
 .story{
-  padding-top: 3rem;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  width: 100%;
   padding-bottom: var(--wrapper-padding);
   .progress{
     position: fixed;
@@ -7,11 +10,27 @@
     top: 0;
     left: 0;
     height: 5px;
-    background: $main;
+    background: $text;
   }
   h1{
     text-align: center;
     line-height: 4rem;
+    padding-top: 3rem;
+    .colors{
+      display: flex;
+      justify-content: center;
+      gap: .3rem;
+      li{
+        cursor: pointer;
+        aspect-ratio: 1/1;
+        width: 1rem;
+        border: .0625rem solid #000;
+        border-radius: 50%;
+        &:nth-child(1){ background: #495E57; }
+        &:nth-child(2){ background: #fff; }
+        &:nth-child(3){ background: #222; }
+      }
+    }
   }
   .divider{
     border-bottom: 1px solid rgb(#000, .1);

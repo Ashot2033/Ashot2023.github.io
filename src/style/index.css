@@ -54,6 +54,8 @@ ul {
 }
 
 header {
+  position: relative;
+  z-index: 999;
   display: flex;
   align-items: center;
   border-bottom: 0.0625rem solid transparent;
@@ -354,7 +356,10 @@ header input[type=checkbox]:checked ~ label::after {
 }
 
 .story {
-  padding-top: 3rem;
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  width: 100%;
   padding-bottom: var(--wrapper-padding);
 }
 .story .progress {
@@ -363,11 +368,33 @@ header input[type=checkbox]:checked ~ label::after {
   top: 0;
   left: 0;
   height: 5px;
-  background: #F4CE14;
+  background: #EDE6E6;
 }
 .story h1 {
   text-align: center;
   line-height: 4rem;
+  padding-top: 3rem;
+}
+.story h1 .colors {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.story h1 .colors li {
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  width: 1rem;
+  border: 0.0625rem solid #000;
+  border-radius: 50%;
+}
+.story h1 .colors li:nth-child(1) {
+  background: #495E57;
+}
+.story h1 .colors li:nth-child(2) {
+  background: #fff;
+}
+.story h1 .colors li:nth-child(3) {
+  background: #222;
 }
 .story .divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

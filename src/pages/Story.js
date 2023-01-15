@@ -15,11 +15,25 @@ const Story = () => {
 
   // get chapter
   useEffect(()=>{
+    const main = document.querySelector('main.story')
+    const progress = document.querySelector('main.story .progress')
+    // main top padding
+    main.style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // bg
-    if(localStorage.getItem('bg')) document.body.style.background = localStorage.getItem('bg')
+    if(localStorage.getItem('bg')){
+      main.style.background = localStorage.getItem('bg')
+      if(localStorage.getItem('bg') == "#fff"){
+        main.style.color = "#444"
+        progress.style.background = "#444"
+      }
+      main.querySelectorAll('nav button').forEach(btn => {
+        btn.style.background = "#fff"
+        btn.style.opacity = .7
+      })
+    }
     // progressbar
     window.addEventListener("scroll", ()=>{
-      document.querySelector('main.story .progress').style.width = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100 + "%"
+      progress.style.width = window.scrollY / (document.querySelector('main.story > .wrapper').scrollHeight - window.innerHeight) * 100 + "%"
     })
     // fetch
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
@@ -34,26 +48,43 @@ const Story = () => {
       })
   })
 
+  const changeBG = (bg) => {
+    const main = document.querySelector('main.story')
+    localStorage.setItem('bg', bg)
+    window.location.reload()
+  }
+
   return (
-    <main className="story wrapper">
-      <div className="progress"/>
-      <h1>{ title }</h1>
-      <div className="divider" />
-      <div className="text">{
-        chapter && chapter.split("\n").map((paragraph, i) => (
-          <p key={i}>{ paragraph }</p>
-        ))}
+    <main className="story">
+    <div className="progress"/>
+      <div className="wrapper">
+        <h1>
+          { title }
+          <div className="settings">
+            <ul className="colors">
+              <li onClick={()=>{ changeBG('#495E57') }} />
+              <li onClick={()=>{ changeBG('#fff') }} />
+              <li onClick={()=>{ changeBG('#222') }} />
+            </ul>
+          </div>
+        </h1>
+        <div className="divider" />
+        <div className="text">{
+          chapter && chapter.split("\n").map((paragraph, i) => (
+            <p key={i}>{ paragraph }</p>
+          ))}
+        </div>
+        <nav>
+          {
+            params.chapter < chaptersLength &&
+              <button className="btn" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1)) }>Следующая глава</button>
+          }
+          {
+            params.chapter > 1 &&
+              <button className="btn light" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
+          }
+        </nav>
       </div>
-      <nav>
-        {
-          params.chapter < chaptersLength &&
-            <button className="btn" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)+1)) }>Следующая глава</button>
-        }
-        {
-          params.chapter > 1 &&
-            <button className="btn light" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
-        }
-      </nav>
     </main>
   )
 }
