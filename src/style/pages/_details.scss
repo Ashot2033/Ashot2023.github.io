@@ -12,7 +12,6 @@
       aspect-ratio: 512/800;
       width: 100%;
       max-width: 9.8rem;
-      border-radius: 0.5714285714rem;
       background-color: #ddd;
       background-size: cover;
       background-position: center;
@@ -45,7 +44,7 @@
   }
   .contents{
     border-radius: 0.5714285714rem;
-    border: .125rem solid #000;
+    box-shadow: 0 0 5rem rgb(#878787, .15);
     padding: 1rem;
     a{
       display: block;

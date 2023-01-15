@@ -21,14 +21,14 @@ const Story = () => {
     // bg
     if(localStorage.getItem('bg')){
       main.style.background = localStorage.getItem('bg')
-      if(localStorage.getItem('bg') === "#fff"){
-        main.style.color = "#444"
-        progress.style.background = "#444"
+      if(localStorage.getItem('bg') === "#222"){
+        main.style.color = "#ccc"
+        progress.style.background = "#ccc"
+        main.querySelectorAll('nav button').forEach(btn => {
+          btn.style.background = "#ccc"
+          btn.style.color = "#000"
+        })
       }
-      main.querySelectorAll('nav button').forEach(btn => {
-        btn.style.background = "#fff"
-        btn.style.opacity = .7
-      })
     }
     // progressbar
     window.addEventListener("scroll", ()=>{
@@ -60,8 +60,8 @@ const Story = () => {
           { title }
           <div className="settings">
             <ul className="colors">
-              <li onClick={()=>{ changeBG('#495E57') }} />
               <li onClick={()=>{ changeBG('#fff') }} />
+              <li onClick={()=>{ changeBG('#CDCAB7') }} />
               <li onClick={()=>{ changeBG('#222') }} />
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Story = () => {
           }
           {
             params.chapter > 1 &&
-              <button className="btn light" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
+              <button className="btn" onClick={ () => redirect("/kbooks/#/story/" + params.id + "/" + (parseInt(params.chapter)-1)) }>Предыдущая глава</button>
           }
         </nav>
       </div>
