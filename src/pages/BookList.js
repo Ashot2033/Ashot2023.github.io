@@ -21,7 +21,8 @@ const BooksList = () => {
       <p>Загрузка...</p>
       <div className="list">{
         books && books.map(book => (
-          <a className="book" href={"/kbooks/#/books/" + book.id} style={{ backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} key={book.title}></a>
+          // eslint-disable-next-line
+          <a className="book" href={"/kbooks/#/books/" + book.id} style={{ backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} key={book.title}/>
         ))}
       </div>
     </main>
