@@ -22,7 +22,7 @@ const Story = () => {
     // bg
     if(localStorage.getItem('bg')){
       main.style.background = localStorage.getItem('bg')
-      if(localStorage.getItem('bg') == "#fff"){
+      if(localStorage.getItem('bg') === "#fff"){
         main.style.color = "#444"
         progress.style.background = "#444"
       }
@@ -49,7 +49,6 @@ const Story = () => {
   })
 
   const changeBG = (bg) => {
-    const main = document.querySelector('main.story')
     localStorage.setItem('bg', bg)
     window.location.reload()
   }
