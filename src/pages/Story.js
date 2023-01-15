@@ -13,7 +13,6 @@ const Story = () => {
   // get url params
   const params = useParams()
 
-  // get chapter
   useEffect(()=>{
     const main = document.querySelector('main.story')
     const progress = document.querySelector('main.story .progress')
@@ -35,7 +34,7 @@ const Story = () => {
     window.addEventListener("scroll", ()=>{
       progress.style.width = window.scrollY / (document.querySelector('main.story > .wrapper').scrollHeight - window.innerHeight) * 100 + "%"
     })
-    // fetch
+    // get chapter
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
       .then(res => { return res.json() })
       .then(data => {
