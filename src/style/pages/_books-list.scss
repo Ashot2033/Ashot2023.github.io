@@ -16,11 +16,12 @@
     .book{
       display: block;
       aspect-ratio: 512/800;
-      // background: lighten($bg, 30);
       box-shadow: 0 0 50px rgb(#1d1d1d, .2);
       border-radius: 0.5714285714rem;
       overflow: hidden;
+      background-color: #888;
       background-size: cover;
+      background-position: center;
     }
   }
 }

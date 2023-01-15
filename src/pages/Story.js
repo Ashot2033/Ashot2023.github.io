@@ -15,9 +15,13 @@ const Story = () => {
 
   // get chapter
   useEffect(()=>{
+    // bg
+    if(localStorage.getItem('bg')) document.body.style.background = localStorage.getItem('bg')
+    // progressbar
     window.addEventListener("scroll", ()=>{
       document.querySelector('main.story .progress').style.width = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100 + "%"
     })
+    // fetch
     fetch('https://ashot2003.github.io/kbooks/api/books.json')
       .then(res => { return res.json() })
       .then(data => {
