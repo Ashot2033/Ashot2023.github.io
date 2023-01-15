@@ -3,21 +3,21 @@
   display: block;
   background: $main;
   text-align: center;
-  color: $light;
+  color: #000;
   font-weight: 500;
   line-height: 1.4285714286rem;
-  border: none;
-  border-radius: 0.2857142857rem;
+  border: .0625rem solid #000;
+  border-radius: .75rem;
   padding: 0.7142857143rem 1.4285714286rem;
   &:hover{
     background: darken($main, 1);
   }
-  &.light{
-    background: rgb($main, .1);
-    color: $main;
-    &:hover{
-      background: rgb($main, .12);
-      text-decoration: underline;
-    }
-  }
+  // &.light{
+  //   background: rgb($main, .1);
+  //   color: $main;
+  //   &:hover{
+  //     background: rgb($main, .12);
+  //     text-decoration: underline;
+  //   }
+  // }
 }

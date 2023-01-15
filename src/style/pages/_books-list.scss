@@ -10,45 +10,17 @@
     margin-bottom: 1.1428571429rem;
   }
   .list{
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 1.1428571429rem;
     .book{
-      display: flex;
-      width: 100%;
-      box-shadow: 0 0 50px rgb(#535353, .08);
+      display: block;
+      aspect-ratio: 512/800;
+      // background: lighten($bg, 30);
+      box-shadow: 0 0 50px rgb(#1d1d1d, .2);
       border-radius: 0.5714285714rem;
       overflow: hidden;
-      .cover{
-        aspect-ratio: 512/800;
-        width: 6rem;
-        background-color: #ddd;
-        background-size: cover;
-        background-position: center;
-      }
-      .content{
-        flex: 1;
-        display: flex;
-        flex-flow: column;
-        padding: 1rem 0.6428571429rem 0.9285714286rem 0.7142857143rem;
-        .type{
-          color: #292929;
-          font-size: 0.7142857143rem;
-          font-weight: 300;
-          line-height: 0.9728571429rem;
-        }
-        .title{
-          font-weight: 500;
-          line-height: 1.3621428571rem;
-          @media (max-width: 769px){
-            margin-bottom: 0.2857142857rem;
-          }
-        }
-        .autor{
-          font-size: 0.7142857143rem;
-          line-height: 0.9728571429rem;
-        }
-      }
+      background-size: cover;
     }
   }
 }

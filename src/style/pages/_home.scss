@@ -4,12 +4,13 @@
     aspect-ratio: 1/1;
     width: 100%;
     max-width: 18rem;
+    border: .0625rem solid #000;
     border-radius: 50%;
     background-color: #ddd;
     background-image: url("/public/images/pfp.jpg");
     background-size: 170%;
     background-position: 60% 0;
-    margin: 0 auto 2rem;
+    margin: 1rem auto 2rem;
   }
   h2{
     margin-bottom: 0.5714285714rem;

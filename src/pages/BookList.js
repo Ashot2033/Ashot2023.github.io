@@ -21,14 +21,7 @@ const BooksList = () => {
       <p>Загрузка...</p>
       <div className="list">{
         books && books.map(book => (
-          <a className="book" href={"/kbooks/#/books/" + book.id} key={book.title}>
-            <div className="cover" style={{ backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} />
-            <div className="content">
-              <div className="type">{ book.type }</div>
-              <div className="title">{ book.title }</div>
-              <div className="autor">Князян А.З.</div>
-            </div>
-          </a>
+          <a className="book" href={"/kbooks/#/books/" + book.id} style={{ backgroundImage: "url('https://ashot2003.github.io/kbooks/images/covers/" + book.cover + "')" }} key={book.title}></a>
         ))}
       </div>
     </main>
