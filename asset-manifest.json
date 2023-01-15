@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kbooks/static/css/main.54669c67.css",
-    "main.js": "/kbooks/static/js/main.ae88cd30.js",
+    "main.css": "/kbooks/static/css/main.8ef2ff0d.css",
+    "main.js": "/kbooks/static/js/main.019cc13b.js",
     "static/media/pfp.jpg": "/kbooks/static/media/pfp.1f9557418338c6fb180e.jpg",
     "index.html": "/kbooks/index.html",
-    "main.54669c67.css.map": "/kbooks/static/css/main.54669c67.css.map",
-    "main.ae88cd30.js.map": "/kbooks/static/js/main.ae88cd30.js.map"
+    "main.8ef2ff0d.css.map": "/kbooks/static/css/main.8ef2ff0d.css.map",
+    "main.019cc13b.js.map": "/kbooks/static/js/main.019cc13b.js.map"
   },
   "entrypoints": [
-    "static/css/main.54669c67.css",
-    "static/js/main.ae88cd30.js"
+    "static/css/main.8ef2ff0d.css",
+    "static/js/main.019cc13b.js"
   ]
 }
