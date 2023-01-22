@@ -367,6 +367,7 @@ header input[type=checkbox]:checked ~ label::after {
   top: 0;
   width: 100%;
   padding-bottom: var(--wrapper-padding);
+  transition: 0.15s;
 }
 .story .progress {
   position: fixed;

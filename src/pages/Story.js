@@ -9,6 +9,7 @@ const Story = () => {
   const [chapter, setChapter] = useState()
   const [title, setTitle] = useState()
   const [chaptersLength, setChaptersLength] = useState()
+  const [bg, setBg] = useState()
 
   // get url params
   const params = useParams()
@@ -19,17 +20,7 @@ const Story = () => {
     // main top padding
     main.style.paddingTop = document.querySelector('header').offsetHeight + "px"
     // bg
-    if(localStorage.getItem('bg')){
-      main.style.background = localStorage.getItem('bg')
-      if(localStorage.getItem('bg') === "#222"){
-        main.style.color = "#ccc"
-        progress.style.background = "#ccc"
-        main.querySelectorAll('nav button').forEach(btn => {
-          btn.style.background = "#ccc"
-          btn.style.color = "#000"
-        })
-      }
-    }
+    if(localStorage.getItem('bg')) setBg(localStorage.getItem('bg'))
     // progressbar
     window.addEventListener("scroll", ()=>{
       progress.style.width = window.scrollY / (document.querySelector('main.story > .wrapper').scrollHeight - window.innerHeight) * 100 + "%"
@@ -45,15 +36,36 @@ const Story = () => {
         setTitle(name)
         setChapter(text)
       })
-  })
+  }, [])
 
-  const changeBG = (bg) => {
-    localStorage.setItem('bg', bg)
-    window.location.reload()
+  useEffect(()=>{
+    const main = document.querySelector('main.story')
+    const progress = document.querySelector('main.story .progress')
+    if(bg === "#222"){
+      main.style.color = "#ccc"
+      progress.style.background = "#ccc"
+      main.querySelectorAll('nav button').forEach(btn => {
+        btn.style.background = "#ccc"
+        btn.style.color = "#000"
+      })
+    }
+    else{
+      main.style.color = "#444"
+      progress.style.background = "#444"
+      main.querySelectorAll('nav button').forEach(btn => {
+        btn.style.background = "#000"
+        btn.style.color = "#fff"
+      })
+    }
+  }, [bg])
+
+  const changeBG = (bg_param) => {
+    localStorage.setItem('bg', bg_param)
+    setBg(bg_param)
   }
 
   return (
-    <main className="story">
+    <main className="story" style={{ background: bg }}>
     <div className="progress"/>
       <div className="wrapper">
         <h1>
