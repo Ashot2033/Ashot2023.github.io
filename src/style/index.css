@@ -189,16 +189,7 @@ header input[type=checkbox]:checked ~ label::after {
   border: 3px solid #000;
   border-top-color: transparent;
   border-radius: 50%;
-  -webkit-animation: 1s loader linear infinite;
-          animation: 1s loader linear infinite;
-}
-@-webkit-keyframes loader {
-  from {
-    transform: translate(-50%, -50%) rotate(0);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  animation: 1s loader linear infinite;
 }
 @keyframes loader {
   from {
@@ -290,17 +281,43 @@ header input[type=checkbox]:checked ~ label::after {
 }
 .books-list .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   gap: 1.1428571429rem;
 }
-.books-list .list .book {
+.books-list .list .book-cont {
   display: block;
-  aspect-ratio: 512/800;
-  box-shadow: 0 0 50px rgba(29, 29, 29, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 1.625rem 3.75rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+.books-list .list .book-cont .cover-container {
+  background: #d2d2d2;
+  border-radius: 0.25rem;
+}
+.books-list .list .book-cont .cover-container .cover-cont {
+  width: 100%;
+  height: 100%;
+  padding: 0.8125rem 2.25rem;
+}
+.books-list .list .book-cont .cover-container .cover-cont .cover {
+  max-width: 6.125rem;
+  aspect-ratio: 512/800;
   background-color: #888;
   background-size: cover;
   background-position: center;
+  margin: 0 auto;
+}
+.books-list .list .book-cont .about {
+  padding: 0.625rem 0.5625rem 1rem 0.75rem;
+}
+.books-list .list .book-cont .about .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+.books-list .list .book-cont .about .author {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #515151;
 }
 
 .details {

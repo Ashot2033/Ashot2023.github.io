@@ -11,16 +11,42 @@
   }
   .list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 1.1428571429rem;
-    .book{
+    .book-cont{
       display: block;
-      aspect-ratio: 512/800;
-      box-shadow: 0 0 50px rgb(#1d1d1d, .2);
+      border-radius: .75rem;
+      box-shadow: 0 1.625rem 3.75rem rgb(#000, .1);
       overflow: hidden;
-      background-color: #888;
-      background-size: cover;
-      background-position: center;
+      .cover-container{
+        background: #d2d2d2;
+        border-radius: .25rem;
+        .cover-cont{
+          width: 100%;
+          height: 100%;
+          padding: .8125rem 2.25rem;
+          .cover{
+            max-width: 6.125rem;
+            aspect-ratio: 512/800;
+            background-color: #888;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+          }
+        }
+      }
+      .about{
+        padding: .625rem .5625rem 1rem .75rem;
+        .title{
+          font-family: "Playfair Display", serif;
+          font-weight: 500;
+        }
+        .author{
+          font-family: "Inter", sans-serif;
+          font-size: .75rem;
+          color: #515151;
+        }
+      }
     }
   }
 }
