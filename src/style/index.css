@@ -313,6 +313,7 @@ header input[type=checkbox]:checked ~ label::after {
 .books-list .list .book-cont .about .title {
   font-family: "Playfair Display", serif;
   font-weight: 500;
+  margin-bottom: 0.125rem;
 }
 .books-list .list .book-cont .about .author {
   font-family: "Inter", sans-serif;
